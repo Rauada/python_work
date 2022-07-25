@@ -1,11 +1,18 @@
-def addition(x,y):
+print("Enter 'q' at any time to quit.\n")
+
+while True:
 	try:
-		result = int(x) + int(y)
+		x = input("\nChoose first number:")
+		if x == 'q':
+			break
+		x = int(x)
+
+		y = input("\nChoose second number:")
+		if y == 'q':
+			break
+		y = int(y)
 	except ValueError:
 		print("One of your inputs is not a number.")
 	else:
-		print(result)
-
-first_number = input("Choose first number:")
-second_number = input("Choose second number:")
-addition(first_number,second_number)
+		sum = int(x) + int(y)
+		print(sum)
